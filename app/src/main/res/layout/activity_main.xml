@@ -9,16 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.nbp.geoquiz.MainActivity"
     android:orientation="vertical"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    >
 
     <TextView
+        android:id="@+id/main_question_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding_8_dp"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
         android:background="#d1c4e9"
-        android:text="@string/question"
         android:textSize="@dimen/text_size"/>
     <LinearLayout
         android:layout_marginTop="@dimen/margion_16_dp"
@@ -48,10 +49,20 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/main_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margion_16_dp"
+        android:text="@string/nextbtn"
+        style="@style/ButtonStyle"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <Button
         android:id="@+id/main_star_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margion_16_dp"
+        android:layout_marginTop="@dimen/margion_120_dp"
         style="@style/ButtonStyle"
         android:text="@string/textofstyle"/>
 </LinearLayout>

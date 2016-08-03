@@ -1,11 +1,24 @@
 <resources>
     <string name="app_name">GeoQuiz</string>
 
-    <string name="question">中国的首都是上海么?</string>
+
     <string name="yesbtn">是的</string>
     <string name="nobtn">不是</string>
+    <string name="previousbtn">《上一题</string>
+    <string name="nextbtn">下一题》</string>
     <string name="textofstyle">点这里赞赏一下好么？么么哒...</string>
-    <string name="toast_click_yes_btn">哈哈，你选错了啊，应该是北京哦。</string>
+    <string name="toast_click_yes_btn">哈哈，你选错了啊。</string>
     <string name="toast_click_no_btn">太棒了，你选对了耶。</string>
     <string name="toast_click_star_btn">谢谢你，啵啵啵...</string>
+
+
+    <string name="question_shanghai">中国的首都是上海么?</string>
+    <string name="question_guiyang">贵州的省会是贵阳么?</string>
+    <string name="question_guiling">桂林是在贵州么?</string>
+    <string name="question_ningbo">宁波靠海么?</string>
+    <string name="question_beijing">中国的首都是北京么?</string>
+    <string name="question_haerbing">哈尔滨是在西北么?</string>
+    <string name="question_lanzhou">兰州是在西北么?</string>
+    <string name="question_xiamen">厦门是在广州么?</string>
+    <string name="question_hangzhou">杭州是浙江的省会么?</string>
 </resources>

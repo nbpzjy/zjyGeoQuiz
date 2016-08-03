@@ -7,4 +7,5 @@
     <dimen name="margion_120_dp">120dp</dimen>
     <dimen name="padding_8_dp">8dp</dimen>
     <dimen name="text_size">32sp</dimen>
+    <dimen name="text_question_hight">100dp</dimen>
 </resources>

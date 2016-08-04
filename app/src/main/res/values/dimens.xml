@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="space_between_button">12dp</dimen>
     <dimen name="margion_16_dp">16dp</dimen>
-    <dimen name="margion_120_dp">120dp</dimen>
+    <dimen name="margion_120_dp">60dp</dimen>
     <dimen name="padding_8_dp">8dp</dimen>
     <dimen name="text_size">32sp</dimen>
     <dimen name="text_question_hight">100dp</dimen>

@@ -2,6 +2,7 @@ package com.nbp.geoquiz;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mPreviousbtn;
     private TextView mTextViewShowQuestion;
     private int mCurrentIndex = 0;
+    private static final String TAG = "GeoQuizActivity";
+    private static final String KEY_INDEX = "index";
 
     //手动生成问题数组
     private Question[] mQuestionsBank = new Question[]{
@@ -55,10 +58,18 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(MainActivity.this,messageResId,Toast.LENGTH_SHORT).show();
     }
 
+    //保存InstanceState到Bundle
+    @Override
+    protected void onSaveInstanceState(Bundle savedIstanceState) {
+        super.onSaveInstanceState(savedIstanceState);
+        Log.i(TAG,"onSaveInstanceState被调用了");
+        savedIstanceState.putInt(KEY_INDEX,mCurrentIndex);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG,"---------onCreate(Bundle) 调用了");
         setContentView(R.layout.activity_main);
 
         mButtonYes = (Button) findViewById(R.id.main_yes_btn);
@@ -69,10 +80,25 @@ public class MainActivity extends AppCompatActivity {
         mPreviousbtn = (Button) findViewById(R.id.main_previous_btn);
 
 
+        //调用之前的Bundle数据，先检查是不是获取成功
+        if (savedInstanceState != null){
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX,0);
+        }
 
         //调用updateQuestion（）显示初始的问题内容
         updateQuestion();
 
+
+
+        //Log a message at "debug" log level
+        Log.d(TAG,"当前的问题的标签是：" + mCurrentIndex);
+
+        Question question;
+        try{
+            question = mQuestionsBank[mCurrentIndex];
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            Log.e(TAG, "Index was out of bounds", ex);
+        }
 
 
 
@@ -133,6 +159,35 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG,"---------onStart() 调用了");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG,"---------onPause() 调用了");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG,"---------onResume() 调用了");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG,"---------onStop() 调用了");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG,"---------onDestroy() 调用了");
+    }
 
 
 }

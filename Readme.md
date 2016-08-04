@@ -111,6 +111,8 @@ mNextbtn.setOnClickListener(new View.OnClickListener() {
 ##1
 
 横屏的设置
+
+
 ![第二章完成的界面图](https://github.com/nbpzjy/zjyGeoQuiz/blob/master/Image-folder/ss_third_chapter_land.png)
 
 先需要在res文件下创建一个Android resources directory文件夹，layout, orintation选择之后选择landscape，生成一个layout-land文件夹存放所以横屏时的layout资源文件，由系统自动调用。注意保证资源文件的名字一定要跟layout文件里的名字一样
@@ -187,6 +189,10 @@ LOG
 上面的LOG信息，除了`onCreate（）`中的必须在super之后之外，其他5个无所谓是不是在超类的前后
 
 
+![第二章完成的界面图](https://github.com/nbpzjy/zjyGeoQuiz/blob/master/Image-folder/ss_third_chapter_loginfo.png)
+
+
+
 ##3
 
 > 怎么实现在横竖屏转换时保持当前的题不变呢？
@@ -231,3 +237,4 @@ LOG
 
 ```
 
+-----
